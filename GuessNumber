@@ -1,0 +1,38 @@
+
+print("this is but a test" + "example")
+num = {1,2,3}
+print(num) 
+
+class GuessNumber:
+
+    allAttempts = {} 
+    repeatGuess = True
+
+    def AttemptGuess(x):
+        try:
+            num = int(x);
+        except ValueError:
+            print("Only a number can be entered")
+
+        #allAttempts += num
+        if num > 50:
+            return "value is higher than 50"
+        elif num < 0:
+            return "value is lower than 0"
+
+        repeatGuess = False
+        return "the number " + str(num) + " was entered, and is within the minMax"
+
+
+    while(repeatGuess):
+
+        print("try entering a number")
+
+        print(AttemptGuess(input()))
+
+    print("these are all the guesses you made.")
+    print("press any key to proceed")
+
+#    for :
+#        input()
+#        print
